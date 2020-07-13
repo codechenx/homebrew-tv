@@ -2,16 +2,23 @@
 class Tv < Formula
   desc "tv is a tool to view the delimited file in terminal."
   homepage "https://github.com/codechenx/tv"
-  version "0.5"
+  version "0.5.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/codechenx/tv/releases/download/v0.5/tv_0.5_darwin_amd64.tar.gz"
-    sha256 "56a9ec6ae18b0c40efb534a671614f0cb68a3ed3ab62323c23f9812ba1d149cc"
+    url "https://github.com/codechenx/tv/releases/download/v0.5.1/tv_0.5.1_darwin_amd64.tar.gz"
+    sha256 "e8f5927bfae53d78bb727f87871bb8c5c73ce9fef14606aa1e821e788801c52e"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/codechenx/tv/releases/download/v0.5/tv_0.5_linux_amd64.tar.gz"
-      sha256 "94af9bcb0964efe88931dc73145eabc2e365f340ef387eb13a02197dfcb4d965"
+      url "https://github.com/codechenx/tv/releases/download/v0.5.1/tv_0.5.1_linux_amd64.tar.gz"
+      sha256 "25b5b9a26b5176abf26d6a26da0138cb7928f82b0a4fdcd41aa84c4c5d39e432"
+    end
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/codechenx/tv/releases/download/v0.5.1/tv_0.5.1_linux_arm64.tar.gz"
+        sha256 "6db2d6f8a53cf74867796af3cc74939bbfd9c4a5a8bc0e434f5a5d2e9f910917"
+      else
+      end
     end
   end
 
