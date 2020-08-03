@@ -7,16 +7,16 @@ class Tv < Formula
 
   if OS.mac?
     url "https://github.com/codechenx/tv/releases/download/v0.5.3/tv_0.5.3_darwin_amd64.tar.gz"
-    sha256 "390e080a390663aa54c99dae83c6029f1d63032f7270e185dacd4ef3d11057a5"
+    sha256 "26f022e8ebf9e33c350310f98c9aab70a059230ddf707bd993e32499d64de15b"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/codechenx/tv/releases/download/v0.5.3/tv_0.5.3_linux_amd64.tar.gz"
-      sha256 "553442d4dbe5f71bc56f004c9abb7a61ab56735712df2624a55c8f9cb2162a36"
+      sha256 "371136c983d1b8557ab5201962a87fbe59e08b913c50ccd8d1367e3a1280da8c"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/codechenx/tv/releases/download/v0.5.3/tv_0.5.3_linux_arm64.tar.gz"
-        sha256 "63379291f3014c8b173853c67f9085ddd795c7abb1813956babe348dc03468b1"
+        sha256 "f00ff2477f650049fc2b8bd2b1e3286a6e4a7886c1f92d42d772b7dbe8349a7d"
       else
       end
     end
